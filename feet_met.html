@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inputtemp" type="Number">
+<select id="change">
+    <option value="feet">Feet</option>
+    <option value="metter">Metter</option>
+</select>
+<button type="button" onclick="feettometer()">Change</button> <br/>
+<h2 id="result"></h2>
+<script>
+    function feettometer() {
+        let metter;
+        let feet;
+       let n=document.getElementById("inputtemp").value;
+       let a=document.getElementById("change").value;
+       if(a=="feet"){
+           metter=0.305*n;
+           document.getElementById("result").innerHTML=metter;
+       }else{
+           feet=3.279*n;
+           document.getElementById("result").innerHTML=feet;
+       }
+    }
+
+</script>
+</body>
+</html>
